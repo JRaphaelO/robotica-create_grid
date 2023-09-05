@@ -45,7 +45,7 @@ void sendGrid()
     std_msgs::Int32MultiArray msg;
     msg.data = gridVector;
 
-    ROS_INFO("Publishing grid in topic robot_grid")
+    ROS_INFO("Publishing grid in topic robot_grid");
     publisher.publish(msg);
 }
 
@@ -89,7 +89,7 @@ void bresenhamLine(int finalPositionX, int finalPositionY)
 
 void setLaserScan(const sensor_msgs::LaserScan::ConstPtr& msg) {
     createGrid();
-    ROS_INFO("I heard LaserScan with %d ranges", msg->ranges.size());
+    ROS_INFO("I heard LaserScan");
 
     for (int i = 0; i < msg->ranges.size(); i++) {
         float range = isinf(msg->ranges[i]) ? msg->range_max : msg->ranges[i];
