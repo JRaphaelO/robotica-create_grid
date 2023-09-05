@@ -1,7 +1,6 @@
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
 #include <std_msgs/Int32MultiArray.h>
-#include <geometry_msgs/PoseStamped.h>
 #include <vector>
 #include <cmath>
 
